@@ -10,7 +10,7 @@ const Home = () => {
   const [jobs, setJobs] = useState([]);
 
   const fetchJobs = async () => {
-    const res = await axios.get('http://localhost:5000/api/jobs');
+    const res = await axios.get('https://job-tracker-backend-ax97.onrender.com/api/jobs');
     setJobs(res.data);
   };
 
