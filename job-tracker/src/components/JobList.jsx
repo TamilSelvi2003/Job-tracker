@@ -12,7 +12,7 @@ const JobList = ({ jobs, refresh }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/jobs/${id}`);
+      await axios.delete(`https://job-tracker-backend-ax97.onrender.com/api/jobs/${id}`);
       refresh();
       toast.success('Job deleted successfully!');
     } catch (error) {
@@ -22,7 +22,7 @@ const JobList = ({ jobs, refresh }) => {
 
   const handleStatusChange = async (id, newStatus) => {
     try {
-      await axios.put(`http://localhost:5000/api/jobs/${id}`, { status: newStatus });
+      await axios.put(`https://job-tracker-backend-ax97.onrender.com/api/jobs/${id}`, { status: newStatus });
       refresh();
       toast.info(`Status updated to ${newStatus}`);
     } catch (error) {
