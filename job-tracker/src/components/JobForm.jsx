@@ -22,7 +22,7 @@ const JobForm = ({ refresh }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/jobs', form);
+      await axios.post('https://job-tracker-backend-ax97.onrender.com/api/jobs', form);
       refresh();
       toast.success('Job added successfully!');
       setForm({ company: '', role: '', status: 'Applied', date: '', link: '' });
